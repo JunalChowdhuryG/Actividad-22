@@ -2,7 +2,7 @@
     "resource": {
         "null_resource": {
             "server": {
-                "provisioner": [
+                "   ": [
                     {
                         "local-exec": {
                             "command": "echo Server hello-world \n  usa red: hello-local-network \n  IP asignada: 10.0.0.5"
