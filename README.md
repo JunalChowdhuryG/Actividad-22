@@ -14,7 +14,29 @@
 
 ## Fase 2
 
+**NetworkModuleOutput**: 
 
+lee configuración externa del archivo network_outputs.json
+
+**ServerFactoryModule** : 
+
+Recibe dependencias a través del constructor
+```python
+# inyeccion desde constructor
+self._network = NetworkModuleOutput(outputs_path)
+
+# uso de las dependencias
+"subnet_name": self._network.name,
+"subnet_cidr": self._network.cidr,
+```
+
+Algunos problemas que vimos son: 
+
+- **Dependencias Hardcodeadas**
+  Ya que la clase ServerFactoryModule está directamente acoplada a NetworkModuleOutput
+ 
+- **Testing** 
+  Dificultad para crear mocks o stubs para pruebas unitarias 
 ## Fase 3
 
 
